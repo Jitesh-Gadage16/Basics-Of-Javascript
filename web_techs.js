@@ -1,1 +1,5 @@
-let  webtech = ["HMTL", "CSS" , "Javascript"]
+let  webTechList = ["HMTL", "CSS" , "Javascript"]
+
+
+
+export{webTechList};

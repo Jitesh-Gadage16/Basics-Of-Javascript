@@ -212,11 +212,11 @@ let expression = 'y=2x-2';
 
 let arr = expression.split('');
 
-console.log(arr);
+// console.log(arr);
 
 let m=Number(arr[2]),c=Number(arr[4]+arr[5]);
 
-console.log(`Slope is ${m} \nx-intercept is ${-c/m} \ny-intercept is ${c}`);
+// console.log(`Slope is ${m} \nx-intercept is ${-c/m} \ny-intercept is ${c}`);
 
 
 // # Question 16 Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
@@ -318,12 +318,12 @@ let evenNumber = 11;
 
 // question  22 
 
-let todayDays = new Date();
+// let todayDays = new Date();
 
 
-function daysInMonth (month, year) {
-  return new Date(year, month, 0).getDate();
-}
+// function daysInMonth (month, year) {
+//   return new Date(year, month, 0).getDate();
+// }
 
 // daysInMonth(7,2009); // 31
 
@@ -378,5 +378,155 @@ function daysInMonth (month, year) {
 //     console.log("ethopia not included")
 //   }
 // }
+
+
+//question 27
+
+// const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+
+// // Sort the array and find the min and max age
+
+// let minAge = Math.min(...ages)
+// let maxAge = Math.max(...ages)
+// console.log(minAge);
+// console.log(maxAge);
+
+// // Find the median age(one middle item or two middle items divided by two)
+
+// let value = (ages.length ) / 2;
+// console.log(value)
+
+// let maidianAge = ages[value] / 2;
+// console.log("maidianAge :",maidianAge)
+
+// // Find the average age(all items divided by number of items)
+
+// var sum = 0;
+
+// for (let i = 0; i < ages.length; i++) {
+//   sum += ages[i];
+// }
+
+// let sumOfAverage = sum / ages.length;
+
+// console.log("average age :",sumOfAverage)
+
+// // Find the range of the ages(max minus min)
+
+// console.log( "Range of the ages :" , maxAge - minAge)
+
+
+// // Compare the value of (min - average) and (max - average), use abs() method
+
+// let minAverage =  Math.abs(minAge - sumOfAverage);
+// console.log("minAerage",minAverage)
+
+
+// let maxAverage =Math.abs(sumOfAverage - minAge);
+
+// console.log("maxAverage",maxAverage)
+
+
+//question 28
+
+// Use for loop to iterate from 0 to 100 and print only prime numbers
+
+// let count = 0;
+// let i, j;
+// for (j = 2; j <= 100; j++) {
+//   // console.log(j)
+//   for (i = 1; i <= j; i++) {
+//     if (j % i == 0)
+//       count++
+//   }
+//   if (count == 2)
+
+//     console.log(j);
+//   count = 0;
+// }
+
+
+// 29. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+// var sume = 0;
+// var sumo = 0;
+// for(let i = 0 ; i< 100; i++){
+//   if( i % 2 == 0){
+//     sume += i;
+   
+//   }  else {
+//     sumo += i;
+
+   
+//   }
+// }
+
+// console.log("even",sume)
+// console.log("odd",sumo)
+
+//Question 30 Problem Statement: Write a script which generates a random hexadecimal number.
+
+// let value = "0123456789ABCDEF"
+// let cons = "#";
+// for( let i = 0; i < 6; i++){
+//   cons = cons + value[Math.floor(Math.random() * 16)];
+ 
+// }
+
+// console.log(cons)
+
+//  question 31 
+
+// const webTechList = ['HTML', 'CSS', 'TailwindCSS', 'JavaScript', 'C', 'C++', 'Java', 'Python', 'MongoDB', 'Express', 'React', 'Node'];
+
+// const mernStack = ['MongoDB', 'Express', 'React', 'NodeJS'];
+
+// console.log(webTechList.sort())
+// console.log(mernStack.sort())
+
+// 32. Array Questions
+//     - Extract all the countries contain the word 'land' from the countries array and print it as array
+//     - Find the country containing the hightest number of characters in the countries array
+//     - Extract all the countries contain the word 'land' from the countries array and print it as array
+//     - Extract all the countries containing only four characters from the countries array and print it as array
+//     - Extract all the countries containing two or more words from the countries array and print it as array
+//     - Reverse the countries array and capitalize each country and stored it as an array
+
+// const countryList = require("./countries.js");
+
+// let arrLand = [];
+
+// countryList.forEach(e => {
+//   if (e.includes('land')) {
+//     arrLand.push(e);
+//   }
+// });
+
+
+// console.log(arrLand)
+
+
+
+// 33. Body mass index(BMI) is calculated as follows: bmi = weight in Kg / (height x height) in m2. Write a function which calculates bmi. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is underweight, normal, overweight or obese based the information given below.
+//     - The same groups apply to both men and women.
+//     - Underweight: BMI is less than 18.5
+//     - Normal weight: BMI is 18.5 to 24.9
+//     - Overweight: BMI is 25 to 29.9
+//     - Obese: BMI is 30 or more
+
+
+let height = 6.8;
+let weight = 70;
+
+function bmiCalculator(w,h){
+  return w / h ** 2;
+}
+
+let bmi = bmiCalculator(height,weight)
+
+console.log(bmi.toFixed(1))
+
+
+
 
 

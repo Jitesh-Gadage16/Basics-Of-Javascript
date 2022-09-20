@@ -1,7 +1,5 @@
-import webtech from "./countries";
+import {webTechList} from './web_techs';
+import {countryList} from './countries';
 
-
-console.log( webtech)
-
-
-export default;
+console.log(webTechList);
+console.log(countryList);
