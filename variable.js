@@ -515,18 +515,29 @@ let evenNumber = 11;
 //     - Obese: BMI is 30 or more
 
 
-let height = 6.8;
-let weight = 70;
+let height = 130;
+let weight = 80;
 
 function bmiCalculator(w,h){
-  return w / h ** 2;
+  return (w * 1000) / h ** 2;
 }
 
 let bmi = bmiCalculator(height,weight)
 
-console.log(bmi.toFixed(1))
+
+if(bmi <= 18.5){
+  console.log("underweight")
+}else if(bmi < 24.9){
+  console.log("normal");
+}else if(bmi < 29.9){
+  console.log("Overweight")
+}else {
+  console.log("Obese")
+}
+
+console.log(bmi)
 
 
 
 
-
+ 
